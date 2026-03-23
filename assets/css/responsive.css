@@ -1,0 +1,347 @@
+/* assets/css/responsive.css - Responsive Design */
+
+/* ===== Large Devices (1200px and up) ===== */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* ===== Medium Devices (992px to 1199px) ===== */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    
+    .hero-grid {
+        gap: 2rem;
+    }
+}
+
+/* ===== Tablets (768px to 991px) ===== */
+@media (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    
+    /* Navigation */
+    .nav-links, .nav-buttons {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    /* Hero Section */
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    /* Features Grid */
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Steps */
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .step:last-child {
+        grid-column: span 2;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Dashboard */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .quick-actions-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ===== Mobile Landscape (576px to 767px) ===== */
+@media (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.5rem; }
+    
+    /* Features Grid */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Steps */
+    .steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .step:last-child {
+        grid-column: auto;
+    }
+    
+    .step:not(:last-child)::after {
+        display: none;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Forms */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Dashboard */
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .quick-actions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .welcome-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    /* Admin */
+    .admin-main {
+        padding: 1rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    [style*="grid-template-columns: repeat(4, 1fr)"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    [style*="grid-template-columns: repeat(3, 1fr)"] {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ===== Mobile Portrait (up to 575px) ===== */
+@media (max-width: 575px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    /* Hero */
+    .hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+    
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Quick Actions */
+    .quick-actions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Cards */
+    .card-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    /* Tables */
+    .data-table {
+        font-size: 0.875rem;
+    }
+    
+    .data-table th,
+    .data-table td {
+        padding: 0.75rem 0.5rem;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 0.625rem 1rem;
+    }
+    
+    /* Forms */
+    .input-group {
+        flex-direction: column;
+        border-radius: 0.75rem;
+    }
+    
+    .input-group .input-group-text {
+        width: 100%;
+        border-radius: 0.75rem 0.75rem 0 0;
+    }
+    
+    .input-group .form-control {
+        width: 100%;
+        border-radius: 0 0 0.75rem 0.75rem;
+    }
+    
+    /* Auth Pages */
+    .auth-card {
+        padding: 1.5rem;
+    }
+    
+    /* Modals */
+    [style*="width: 500px"],
+    [style*="width: 600px"],
+    [style*="width: 700px"] {
+        width: 90% !important;
+        margin: 0 auto;
+        padding: 1.5rem !important;
+    }
+}
+
+/* ===== Print Styles ===== */
+@media print {
+    .no-print,
+    .navbar,
+    .footer,
+    .bottom-nav,
+    .btn,
+    .mobile-header,
+    .desktop-sidebar {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+        padding: 1rem;
+    }
+    
+    .main-content {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        break-inside: avoid;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+/* ===== Dark Mode Support ===== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a1a;
+        --card-bg: #2d2d2d;
+        --dark: #ffffff;
+        --light: #2d2d2d;
+        --gray: #a0a0a0;
+        --gray-light: #404040;
+    }
+    
+    body {
+        background: var(--bg-color);
+        color: var(--dark);
+    }
+    
+    .card,
+    .stat-card,
+    .service-card,
+    .quick-action-item {
+        background: var(--card-bg);
+    }
+    
+    .form-control {
+        background: var(--card-bg);
+        color: var(--dark);
+        border-color: var(--gray-light);
+    }
+    
+    .input-group-text {
+        background: var(--light);
+        color: var(--gray);
+    }
+}
+
+/* ===== Accessibility ===== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ===== High Contrast Mode ===== */
+@media (prefers-contrast: high) {
+    :root {
+        --primary: #0000ff;
+        --secondary: #800080;
+        --success: #008000;
+        --danger: #ff0000;
+        --warning: #ffa500;
+    }
+    
+    .btn-primary {
+        border: 2px solid black;
+    }
+    
+    .card {
+        border: 2px solid black;
+    }
+}
